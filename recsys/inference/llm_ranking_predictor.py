@@ -1,7 +1,7 @@
 import logging
 
 import hopsworks
-from langchain import PromptTemplate, LLMChain
+# from langchain import PromptTemplate, LLMChain
 from langchain_core.output_parsers import BaseOutputParser
 from langchain_openai import ChatOpenAI
 
@@ -118,19 +118,19 @@ class Predict(object):
             preprocessed.append(query_parameters)
         return preprocessed
 
-    def _build_lang_chain(self):
-        model = ChatOpenAI(
-            model_name='gpt-4o-mini-2024-07-18',
-            temperature=0.7,
-            openai_api_key=self.openai_api_key,
-        )
-        prompt = PromptTemplate(
-            input_variables=self.input_variables,
-            template=PROMPT_TEMPLATE,
-        )
-        langchain = LLMChain(
-            llm=model,
-            prompt=prompt,
-            verbose=True
-        )
-        return langchain
+    # def _build_lang_chain(self):
+    #     model = ChatOpenAI(
+    #         model_name='gpt-4o-mini-2024-07-18',
+    #         temperature=0.7,
+    #         openai_api_key=self.openai_api_key,
+    #     )
+    #     prompt = PromptTemplate(
+    #         input_variables=self.input_variables,
+    #         template=PROMPT_TEMPLATE,
+    #     )
+    #     langchain = LLMChain(
+    #         llm=model,
+    #         prompt=prompt,
+    #         verbose=True
+    #     )
+    #     return langchain

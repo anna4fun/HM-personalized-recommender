@@ -2,7 +2,7 @@ import os
 from typing import Literal
 
 import hopsworks
-import tensorflow as tf
+import tensorflow as tf # TODO: migrate all tf based dependencies into torch
 from hsml.transformer import Transformer
 from loguru import logger
 

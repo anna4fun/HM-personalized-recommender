@@ -12,6 +12,7 @@ def preprocess(train_df: pd.DataFrame, candidate_features: list) -> pd.DataFrame
     return item_df
 
 
+# TODO: re-write the embedding replace tensorflow with pytorch
 def embed(df: pd.DataFrame, candidate_model) -> pd.DataFrame:
     ds = tf.data.Dataset.from_tensor_slices({col: df[col] for col in df})
 
