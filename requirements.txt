@@ -27,8 +27,10 @@ notebook==7.0.7
 pydantic
 pydantic_settings
 hopsworks
+pyarrow==22.0.0
 langchain==1.0.7
 langchain-openai==1.0.3
 catboost==1.2.8
 tensorflow==2.16.2
 tensorflow_recommenders==0.7.3
+tf-keras==2.20.1
